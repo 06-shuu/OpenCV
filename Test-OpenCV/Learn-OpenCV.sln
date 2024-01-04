@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "greyscale", "..\greyscale\g
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-displayImage", "..\01-displayImage\01-displayImage.vcxproj", "{FB8E993C-2B84-448D-95E0-BA00C524622A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02-PlayVideo", "..\02-PlayVideo\02-PlayVideo.vcxproj", "{B18354D6-1B43-4744-B984-068B30C9F1A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{FB8E993C-2B84-448D-95E0-BA00C524622A}.Release|x64.Build.0 = Release|x64
 		{FB8E993C-2B84-448D-95E0-BA00C524622A}.Release|x86.ActiveCfg = Release|Win32
 		{FB8E993C-2B84-448D-95E0-BA00C524622A}.Release|x86.Build.0 = Release|Win32
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Debug|x64.ActiveCfg = Debug|x64
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Debug|x64.Build.0 = Debug|x64
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Debug|x86.ActiveCfg = Debug|Win32
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Debug|x86.Build.0 = Debug|Win32
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Release|x64.ActiveCfg = Release|x64
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Release|x64.Build.0 = Release|x64
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Release|x86.ActiveCfg = Release|Win32
+		{B18354D6-1B43-4744-B984-068B30C9F1A4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
