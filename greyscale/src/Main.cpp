@@ -35,6 +35,7 @@ int main()
         for (int j = 0; j < image2.cols; j++) {
             cv::Vec3b bgrPixel = image2.at<cv::Vec3b>(i, j);
             //Greyscale = R+B+G/3 
+            //OpenCV library functions usually read images in BGR format
             unsigned char greyScale = (bgrPixel[2]+ bgrPixel[1]+ bgrPixel[0]) / 3;
             image2.at<cv::Vec3b>(i, j) = { greyScale, greyScale, greyScale };
             cv::Vec3b greyPixel = image2.at<cv::Vec3b>(i, j);
