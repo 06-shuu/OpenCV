@@ -1,4 +1,4 @@
 # OpenCV
-i am currently learning openCV with C++ using the following refrences:
+Currently learning OpenCV with C++ using the following resources:
 - https://www.opencv-srf.com/p/opencv-lessons.html
 - Learning OpenCV 3.0: Computer Vision in C++ with the OpenCV (Book) 
