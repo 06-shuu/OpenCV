@@ -27,6 +27,7 @@
     <ProjectGuid>{fb8e993c-2b84-448d-95e0-ba00c524622a}</ProjectGuid>
     <RootNamespace>_01_displayImage</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Load and Display Image</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

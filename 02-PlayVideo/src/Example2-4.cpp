@@ -1,4 +1,4 @@
-//add a slider trackbar and  allow the user to single-step the video by pressing the S key and
+//Example 2-4. add a slider trackbar and  allow the user to single-step the video by pressing the S key and
 //to go into run mode by pressing the R key
 
 #include "opencv2/highgui/highgui.hpp"
