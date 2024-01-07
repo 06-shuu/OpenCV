@@ -1,5 +1,10 @@
 //Load Image from file and display
 
+
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+
 #include <opencv2/opencv.hpp> // include all other neccessary header files in OpenCV library
 #include <iostream>
 using namespace cv; //to avoid appending cv:: before each opencv function,class, or data structure
@@ -23,4 +28,4 @@ int main() {
 	destroyWindow(windowName); //then distroy the image
 
 	return 0;
-}
+} 

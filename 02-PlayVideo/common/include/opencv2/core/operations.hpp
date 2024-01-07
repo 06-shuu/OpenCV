@@ -51,20 +51,10 @@
 
 #include <cstdio>
 
-#if defined(__GNUC__) || defined(__clang__) // at least GCC 3.1+, clang 3.5+
-#  if defined(__MINGW_PRINTF_FORMAT)  // https://sourceforge.net/p/mingw-w64/wiki2/gnu%20printf/.
-#    define CV_FORMAT_PRINTF(string_idx, first_to_check) __attribute__ ((format (__MINGW_PRINTF_FORMAT, string_idx, first_to_check)))
-#  else
-#    define CV_FORMAT_PRINTF(string_idx, first_to_check) __attribute__ ((format (printf, string_idx, first_to_check)))
-#  endif
-#else
-#  define CV_FORMAT_PRINTF(A, B)
-#endif
+//! @cond IGNORED
 
 namespace cv
 {
-//! @cond IGNORED
-
 
 ////////////////////////////// Matx methods depending on core API /////////////////////////////
 
@@ -228,22 +218,6 @@ Matx<_Tp,m,n> Matx<_Tp,m,n>::randn(_Tp a, _Tp b)
     Matx<_Tp,m,n> M;
     cv::randn(M, Scalar(a), Scalar(b));
     return M;
-}
-
-template<typename _Tp, int cn> inline
-Vec<_Tp, cn> Vec<_Tp, cn>::randu(_Tp a, _Tp b)
-{
-    Vec<_Tp,cn> V;
-    cv::randu(V, Scalar(a), Scalar(b));
-    return V;
-}
-
-template<typename _Tp, int cn> inline
-Vec<_Tp, cn> Vec<_Tp, cn>::randn(_Tp a, _Tp b)
-{
-    Vec<_Tp,cn> V;
-    cv::randn(V, Scalar(a), Scalar(b));
-    return V;
 }
 
 template<typename _Tp, int m, int n> inline
@@ -424,11 +398,20 @@ template<typename _Tp> static inline _Tp randu()
   return (_Tp)theRNG();
 }
 
+///////////////////////////////// Formatted string generation /////////////////////////////////
+
+/** @brief Returns a text string formatted using the printf-like expression.
+
+The function acts like sprintf but forms and returns an STL string. It can be used to form an error
+message in the Exception constructor.
+@param fmt printf-compatible formatting specifiers.
+ */
+CV_EXPORTS String format( const char* fmt, ... );
 
 ///////////////////////////////// Formatted output of cv::Mat /////////////////////////////////
 
 static inline
-Ptr<Formatted> format(InputArray mtx, Formatter::FormatType fmt)
+Ptr<Formatted> format(InputArray mtx, int fmt)
 {
     return Formatter::get(fmt)->format(mtx.getMat());
 }
@@ -475,28 +458,6 @@ int print(const Matx<_Tp, m, n>& matx, FILE* stream = stdout)
 }
 
 //! @endcond
-
-///////////////////////////////// Formatted string generation /////////////////////////////////
-
-/** @brief Returns a text string formatted using the printf-like expression.
-
-The function acts like sprintf but forms and returns an STL string. It can be used to form an error
-message in the Exception constructor.
-@param fmt printf-compatible formatting specifiers.
-
-**Note**:
-|Type|Specifier|
-|-|-|
-|`const char*`|`%s`|
-|`char`|`%c`|
-|`float` / `double`|`%f`,`%g`|
-|`int`, `long`, `long long`|`%d`, `%ld`, ``%lld`|
-|`unsigned`, `unsigned long`, `unsigned long long`|`%u`, `%lu`, `%llu`|
-|`uint64` -> `uintmax_t`, `int64` -> `intmax_t`|`%ju`, `%jd`|
-|`size_t`|`%zu`|
-@ingroup core_utils
- */
-CV_EXPORTS String format(const char* fmt, ...) CV_FORMAT_PRINTF(1, 2);
 
 /****************************************************************************************\
 *                                  Auxiliary algorithms                                  *

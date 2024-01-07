@@ -116,7 +116,7 @@ cv::flann::L2 - Squared Euclidean distance functor, optimized version.
 
 cv::flann::L1 - Manhattan distance functor, optimized version.
 
-cv::flann::MinkowskiDistance -  The Minkowski distance functor.
+cv::flann::MinkowskiDistance -  The Minkowsky distance functor.
 This is highly optimised with loop unrolling.
 The computation of squared root at the end is omitted for efficiency.
 
@@ -230,8 +230,14 @@ public:
                 int branching = 32,
                 int iterations = 11,
                 flann_centers_init_t centers_init = CENTERS_RANDOM,
-                float cb_index = 0.2,
-                int trees = 1);
+                float cb_index = 0.2 );
+
+            KMeansIndexParams(
+                int branching,
+                int iterations,
+                flann_centers_init_t centers_init,
+                float cb_index,
+                int trees );
         };
         @endcode
         - **CompositeIndexParams** When using a parameters object of this type the index created
@@ -256,9 +262,9 @@ public:
         struct LshIndexParams : public IndexParams
         {
             LshIndexParams(
-                int table_number,
-                int key_size,
-                int multi_probe_level );
+                unsigned int table_number,
+                unsigned int key_size,
+                unsigned int multi_probe_level );
         };
         @endcode
         - **AutotunedIndexParams** When passing an object of this type the index created is
