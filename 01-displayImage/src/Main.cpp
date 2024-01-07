@@ -1,11 +1,6 @@
-//Load Image from file and display
+//Load Image from file and display (Example 2-1)
 
-
-#include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/highgui.hpp>
-
-#include <opencv2/opencv.hpp> // include all other neccessary header files in OpenCV library
+#include "opencv2/highgui/highgui.hpp" 
 #include <iostream>
 using namespace cv; //to avoid appending cv:: before each opencv function,class, or data structure
 using namespace std;
