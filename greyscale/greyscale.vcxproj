@@ -27,6 +27,7 @@
     <ProjectGuid>{04868881-87d2-4bf6-81cb-25890399f1a6}</ProjectGuid>
     <RootNamespace>greyscale</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Greyscale</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

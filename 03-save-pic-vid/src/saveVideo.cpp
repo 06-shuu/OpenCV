@@ -8,7 +8,7 @@ using namespace cv;
 
 int main() {
 
-	VideoCapture cap("res/videos/IsaacFoster.mp4");
+	VideoCapture cap("res/videos/Moriarty.mp4");
 	//VideoCapture cap(0); //if we want to save video from the camera
 
 

@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	cap.open(string("res/videos/Moriarty.mp4"));
 
 	Mat frame;
-	for (;;) {
+	for (;;) { 
 		cap >> frame; //read the vid frame bt frame
 		if (frame.empty()) 
 			break;
