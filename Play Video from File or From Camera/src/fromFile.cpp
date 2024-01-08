@@ -7,7 +7,7 @@ using namespace cv;
 int main()
 {
     
-    VideoCapture cap("C:/Users/shusa/Downloads/Y2meta.app-“Catch me if you can, Mr Holmes” Yuukoku no Moriarty-(480p) (online-video-cutter.com).mp4");
+    VideoCapture cap("res/videos/Moriarty.mp4");
 
     if (cap.isOpened() == false) {
         cout << "Cannot open the video file" << endl;
