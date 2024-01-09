@@ -25,18 +25,17 @@ int main() {
 		cap >> frame;
 		if (frame.empty())
 			break;
+		//display the ooriginal video
 		cv::imshow(window1, frame);
-		
+
+		//downsampling the video and display it and save it
 		cv::pyrDown(frame, frame2);
 		cv::imshow(window2, frame2);
-		
 		writer << frame2;  
 
 		char c = cv::waitKey(10);
 		if (c == 27)
-			break;
-
-		
+			break;		
 	}//end of while loop
 
 	cap.release();
