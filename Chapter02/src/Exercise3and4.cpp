@@ -1,6 +1,9 @@
-//Use the capture and store code in Example 2-11 together with the PyrDown()
+//Ex3: Use the capture and store code in Example 2-11 together with the PyrDown()
 //code of Example 2 - 6 to create a program that reads from a camera and stores
 //downsampled color images to disk.
+
+//Ex4:Modify the code in Exercise 3 and combine it with the window display code in
+// Example 2 - 2 to display the frames as they are processed.
 
 #include "opencv2/opencv.hpp"
 #include <iostream>
