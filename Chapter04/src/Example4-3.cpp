@@ -1,5 +1,5 @@
-//Example 4-2. page:83
-//Summation of two arrays using the N-ary operator
+//Example 4-3. page:
+// 
 #include "opencv2/opencv.hpp"
 #include <iostream>
 
